@@ -10,7 +10,7 @@ if api_key:
     try:
         genai.configure(api_key=api_key)
         # On utilise le modèle 1.5-flash qui est le plus robuste
-        model = genai.GenerativeModel('gemini-1.5-flash')
+        model = genai.GenerativeModel(model_name="models/gemini-1.5-flash")
 
         st.sidebar.divider()
         mode = st.sidebar.radio("Choisis ta Face :", ["🚀 HoldIn-AI (Création)", "📊 Full-Auto (Gestion)"])
